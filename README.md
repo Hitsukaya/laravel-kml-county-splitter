@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  A Laravel + Livewire application that allows users to upload KML files and automatically extract, filter and generate KML/CSV files per selected county (VS, GL, BZ, BR).
+  A Laravel + Livewire application that allows users to upload KML files and automatically extract, filter and generate KML/CSV files per selected county.
 </p>
 
 # Laravel KML County Splitter
@@ -18,7 +18,7 @@
 ## ✨ Features
 
 - ✅ Upload single or multiple `.kml` / `.xml` files
-- ✅ Select counties (e.g., Vaslui, Galați, etc.)
+- ✅ Select counties  
 - ✅ Automatically detect placemarks related to selected counties
 - ✅ Generates downloadable KML and CSV per county
 
