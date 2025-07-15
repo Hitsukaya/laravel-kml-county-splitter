@@ -3,16 +3,24 @@
   <img src="https://i.imgur.com/EHJkjOV.png" width="400" alt="Laravel KML County Splitter Logo">
 </p>
 
+<p align="center">
+  <img src="https://i.imgur.com/bmrJ0A7.png" width="400" alt="Laravel Livewire KML Splitter Logo">
+</p>
+
+<p align="center">
+  A Laravel + Livewire application that allows users to upload KML files and automatically extract, filter and generate KML/CSV files per selected county (VS, GL, BZ, BR).
+</p>
+
 # Laravel KML County Splitter
 
 **Laravel + Livewire component** to upload and process KML files, extract placemarks, and export results per county into KML & CSV files.
 
 ## ✨ Features
 
-- Upload single or multiple `.kml` or `.xml` files
-- Select counties (`VS`, `GL`, `BZ`, `BR`) to filter placemarks
-- Auto-generates downloadable KML and CSV files per selected county
-- Supports extended data in placemarks (SchemaData + Data)
+- ✅ Upload single or multiple `.kml` / `.xml` files
+- ✅ Select counties (e.g., Vaslui, Galați, etc.)
+- ✅ Automatically detect placemarks related to selected counties
+- ✅ Generates downloadable KML and CSV per county
 
 ## 🚀 Installation
 
