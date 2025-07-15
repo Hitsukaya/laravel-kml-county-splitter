@@ -4,12 +4,13 @@
 </p>
 
 <p align="center">
-  <img src="https://i.imgur.com/bmrJ0A7.png" width="400" alt="Laravel Livewire KML Splitter Logo">
+  A Laravel + Livewire application that allows users to upload KML files and automatically extract, filter and generate KML/CSV files per selected county.
 </p>
 
 <p align="center">
-  A Laravel + Livewire application that allows users to upload KML files and automatically extract, filter and generate KML/CSV files per selected county.
+  <img src="https://i.imgur.com/bmrJ0A7.png" width="400" alt="Laravel Livewire KML Splitter Logo">
 </p>
+
 
 # Laravel KML County Splitter
 
