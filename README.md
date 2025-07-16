@@ -11,6 +11,8 @@
   <img src="https://i.imgur.com/bmrJ0A7.png" width="400" alt="Laravel Livewire KML Splitter Logo">
 </p>
 
+[![License](https://img.shields.io/github/license/Hitsukaya/laravel-kml-county-splitter)](LICENSE)
+[![PageSpeed Score](https://img.shields.io/badge/PageSpeed-100%25-brightgreen)](https://pagespeed.web.dev/)
 
 # Laravel KML County Splitter
 
