@@ -16,7 +16,16 @@ class KmlUploader extends Component
     public $selectedCounties = [];
     public $Countiesfound  = [];
     public $downloadLinks = [];
-    public $availableCounties = ['VS', 'GL', 'BZ', 'BR'];
+    //public $availableCounties = ['VS', 'GL', 'BZ', 'BR'];
+
+    public $availableCounties = [
+    'AB', 'AR', 'AG', 'BC', 'BH', 'BN', 'BR', 'BT', 'BV',
+    'BZ', 'CS', 'CL', 'CJ', 'CT', 'CV', 'DB', 'DJ', 'GL',
+    'GR', 'GJ', 'HR', 'HD', 'IL', 'IS', 'IF', 'MM', 'MH',
+    'MS', 'NT', 'OT', 'PH', 'SM', 'SJ', 'SB', 'SV', 'TR',
+    'TM', 'TL', 'VS', 'VL', 'VN', 'B'
+    ];
+
 
     public $message = '';
     public $detailedMessage = '';
@@ -73,12 +82,58 @@ class KmlUploader extends Component
         $rezultate = [];
         $placemarksByCounty = [];
 
+        // $aliasuriCounties = [
+        //     'VS' => ['VS', 'Vaslui'],
+        //     'GL' => ['GL', 'Galati', 'Galați'],
+        //     'BZ' => ['BZ', 'Buzau', 'Buzău'],
+        //     'BR' => ['BR', 'Braila', 'Brăila'],
+        // ];
+
         $aliasuriCounties = [
+            'AB' => ['AB', 'Alba'],
+            'AR' => ['AR', 'Arad'],
+            'AG' => ['AG', 'Argeș', 'Arges'],
+            'BC' => ['BC', 'Bacău', 'Bacau'],
+            'BH' => ['BH', 'Bihor'],
+            'BN' => ['BN', 'Bistrița-Năsăud', 'Bistrita-Nasaud'],
+            'BR' => ['BR', 'Brăila', 'Braila'],
+            'BT' => ['BT', 'Botoșani', 'Botosani'],
+            'BV' => ['BV', 'Brașov', 'Brasov'],
+            'BZ' => ['BZ', 'Buzău', 'Buzau'],
+            'CS' => ['CS', 'Caraș-Severin', 'Caras-Severin'],
+            'CL' => ['CL', 'Călărași', 'Calarasi'],
+            'CJ' => ['CJ', 'Cluj'],
+            'CT' => ['CT', 'Constanța', 'Constanta'],
+            'CV' => ['CV', 'Covasna'],
+            'DB' => ['DB', 'Dâmbovița', 'Dambovita'],
+            'DJ' => ['DJ', 'Dolj'],
+            'GL' => ['GL', 'Galați', 'Galati'],
+            'GR' => ['GR', 'Giurgiu'],
+            'GJ' => ['GJ', 'Gorj'],
+            'HR' => ['HR', 'Harghita'],
+            'HD' => ['HD', 'Hunedoara'],
+            'IL' => ['IL', 'Ialomița', 'Ialomita'],
+            'IS' => ['IS', 'Iași', 'Iasi'],
+            'IF' => ['IF', 'Ilfov'],
+            'MM' => ['MM', 'Maramureș', 'Maramures'],
+            'MH' => ['MH', 'Mehedinți', 'Mehedinti'],
+            'MS' => ['MS', 'Mureș', 'Mures'],
+            'NT' => ['NT', 'Neamț', 'Neamt'],
+            'OT' => ['OT', 'Olt'],
+            'PH' => ['PH', 'Prahova'],
+            'SM' => ['SM', 'Satu Mare'],
+            'SJ' => ['SJ', 'Sălaj', 'Salaj'],
+            'SB' => ['SB', 'Sibiu'],
+            'SV' => ['SV', 'Suceava'],
+            'TR' => ['TR', 'Teleorman'],
+            'TM' => ['TM', 'Timiș', 'Timis'],
+            'TL' => ['TL', 'Tulcea'],
             'VS' => ['VS', 'Vaslui'],
-            'GL' => ['GL', 'Galati', 'Galați'],
-            'BZ' => ['BZ', 'Buzau', 'Buzău'],
-            'BR' => ['BR', 'Braila', 'Brăila'],
+            'VL' => ['VL', 'Vâlcea', 'Valcea'],
+            'VN' => ['VN', 'Vrancea'],
+            'B'  => ['B', 'București', 'Bucuresti']
         ];
+
 
         foreach ($placemarks as $placemark) {
             $nume = trim((string) $placemark->name);
@@ -108,15 +163,54 @@ class KmlUploader extends Component
                     }
                 }
 
+
                 if ($found) {
                     break;
                 }
+
             }
+
         }
+
+        $foundCounties = array_keys($rezultate);
+        $unexpectedCounties = array_diff($foundCounties, $this->selectedCounties);
+
+        if (!empty($unexpectedCounties)) {
+            $this->message = '❌ The KML file contains placemarks for county(ies) that were NOT selected: '
+                . implode(', ', $unexpectedCounties);
+            return;
+        }
+
+        $missing = array_diff($this->selectedCounties, $foundCounties);
+
+        if (!empty($missing)) {
+            $this->message = '⚠️ No placemarks found for county(ies): ' . implode(', ', $missing);
+            return;
+        }
+
+        foreach ($placemarksByCounty as $county => $placemarks) {
+            $this->downloadLinks[strtolower($county)] = $this->createFiles(strtolower($county), $placemarks);
+        }
+
+        $this->message = $this->generateMessage($totalPlacemarks);
 
         Log::info('Found results per county:', $rezultate);
 
         $this->Countiesfound  = $rezultate;
+
+        $foundCounties = array_keys($rezultate);
+        $unexpectedCounties = array_diff($foundCounties, $this->selectedCounties);
+
+        if (!empty($unexpectedCounties)) {
+            $this->message = '❌ The KML file contains placemarks for county(ies) that were NOT selected: '
+                . implode(', ', $unexpectedCounties);
+            return;
+        }
+        $missing = array_diff($this->selectedCounties, $foundCounties);
+        if (!empty($missing)) {
+            $this->message = '⚠️ No placemarks found for county(ies): ' . implode(', ', $missing);
+            return;
+        }
 
         foreach ($placemarksByCounty as $county => $placemarks) {
             $this->downloadLinks[strtolower($county)] = $this->createFiles(strtolower($county), $placemarks);
