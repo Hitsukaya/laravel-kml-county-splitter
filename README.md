@@ -65,3 +65,10 @@ php artisan serve
 ```
 php artisan storage:link
 ```
+
+## 🌐 Demo Online
+[https://kml-splitter-kml-csv.hitsukaya.com](https://kml-splitter-kml-csv.hitsukaya.com)
+
+## Report Issues
+Please use the [GitHub Issues](https://github.com/Hitsukaya/laravel-kml-county-splitter/issues) to report bugs or request features.
+
