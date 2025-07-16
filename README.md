@@ -11,12 +11,11 @@
   <img src="https://i.imgur.com/bmrJ0A7.png" width="400" alt="Laravel Livewire KML Splitter Logo">
 </p>
 
+[![Hitsukaya](https://img.shields.io/badge/Hitsukaya-2025-red)](https://hitsukaya.com)
 [![PageSpeed Score](https://img.shields.io/badge/PageSpeed-100%25-brightgreen)](https://pagespeed.web.dev/)
 [![License](https://img.shields.io/github/license/Hitsukaya/laravel-kml-county-splitter)](LICENSE)
 [![Laravel](https://img.shields.io/badge/Laravel-12-red)](https://laravel.com/)
 [![Livewire](https://img.shields.io/badge/Livewire-3-blueviolet)](https://livewire.laravel.com/)
-
-[![Hitsukaya](https://img.shields.io/badge/Hitsukaya-2025-orange)](https://hitsukaya.com)
 
 
 ✍️ Author: Hitsukaya 
