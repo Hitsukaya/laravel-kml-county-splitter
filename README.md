@@ -11,9 +11,11 @@
   <img src="https://i.imgur.com/bmrJ0A7.png" width="400" alt="Laravel Livewire KML Splitter Logo">
 </p>
 
-[![License](https://img.shields.io/github/license/Hitsukaya/laravel-kml-county-splitter)](LICENSE)
 [![PageSpeed Score](https://img.shields.io/badge/PageSpeed-100%25-brightgreen)](https://pagespeed.web.dev/)
 [![Livewire](https://img.shields.io/badge/Livewire-3-blueviolet)](https://livewire.laravel.com/)
+
+✍️ Author: Hitsukaya 
+🔗 https://hitsukaya.com
 
 # Laravel KML County Splitter
 
@@ -59,11 +61,3 @@ php artisan serve
 ```
 php artisan storage:link
 ```
-
-📄 License
-This project is open-source under the MIT License.
-
-✍️ Author
-Hitsukaya / Valentin Hitsukaya
-🔗 https://hitsukaya.com
-
