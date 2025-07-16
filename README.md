@@ -16,6 +16,8 @@
 [![Laravel](https://img.shields.io/badge/Laravel-12-red)](https://laravel.com/)
 [![Livewire](https://img.shields.io/badge/Livewire-3-blueviolet)](https://livewire.laravel.com/)
 
+[![Hitsukaya](https://camo.githubusercontent.com/a658d91a154e9561b39d005fe48f4690fd2a9a5cb7e5de81d7753733e8c62f90/68747470733a2f2f692e696d6775722e636f6d2f626d724a3041372e706e67)](https://hitsukaya.com)
+
 ✍️ Author: Hitsukaya 
 🔗 https://hitsukaya.com
 
