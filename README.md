@@ -26,6 +26,14 @@
 - ✅ Automatically detect placemarks related to selected counties
 - ✅ Generates downloadable KML and CSV per county
 
+🧪 Tech Stack
+- ✅ Laravel 12
+- ✅ Livewire 3
+- ✅ Tailwind CSS
+- ✅ Alpine.js
+- ✅ PHP 8.4+
+- ✅ QGIS / KML / CSV data processing
+
 ## 🚀 Installation
 
 1. Clone the repo:
