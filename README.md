@@ -59,3 +59,11 @@ php artisan serve
 ```
 php artisan storage:link
 ```
+
+📄 License
+This project is open-source under the MIT License.
+
+✍️ Author
+Hitsukaya / Valentin Hitsukaya
+🔗 https://hitsukaya.com
+
