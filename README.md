@@ -14,24 +14,24 @@
 
 # Laravel KML County Splitter
 
-Un proiect Laravel Livewire pentru conversia și manipularea fișierelor KML, CSV și GeoJSON.  
-Ideal pentru integrare cu QGIS și alte instrumente GIS.
+A Laravel Livewire project for converting and handling KML, CSV, and GeoJSON files.  
+Perfect for integration with QGIS and other GIS tools.
 
 ---
 
-## Funcționalități
+## Features
 
-- Conversie KML ↔ CSV ↔ GeoJSON  
-- Încărcare multiplă de fișiere KML/CSV  
-- Procesare rapidă a datelor GIS  
-- Interfață Livewire modernă  
-- Ușor de integrat cu QGIS sau alte aplicații GIS  
+- KML ↔ CSV ↔ GeoJSON conversion  
+- Multiple KML/CSV file uploads  
+- Fast GIS data processing  
+- Modern Livewire interface  
+- Easy integration with QGIS or other GIS applications  
 
 ---
 
-## Instalare
+## Installation
 
-1. Clonează repository-ul:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/Hitsukaya/laravel-kml-county-splitter.git
@@ -45,3 +45,4 @@ cp .env.example .env
 php artisan key:generate
 
 php artisan serve
+
