@@ -3,7 +3,9 @@
 </p>
 
 <p align="center">
-<a href="https://hitsukaya.com"><img src="https://img.shields.io/badge/Hitsukaya-RED-ff0000?style=for-the-badge&logo=laravel" alt="Hitsukaya Red"></a>
+<a href="https://hitsukaya.com">
+  <img src="https://img.shields.io/badge/Hitsukaya-RED-red" alt="Hitsukaya">
+</a>
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
