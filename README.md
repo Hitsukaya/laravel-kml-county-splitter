@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://imgur.com/a/larave-livewire-qgis-hitsukaya-2LO5kYZ" width="400" alt="Hitsukaya Logo">
+  <img src="https://i.imgur.com/bmrJ0A7.png" width="400" alt="Hitsukaya Logo">
 </p>
 
 <p align="center">
